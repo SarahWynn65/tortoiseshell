@@ -102,7 +102,27 @@ html {
   height: auto;
 }
 
-/* Philosphy and Appointment Info */
+/* Philosophy and Appointment Info */
+
+#Philosophy {
+  display: inline-flex;
+  justify-content: center;
+}
+
+#Philosophy div {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  width: 35%;
+}
+
+h1 {
+  background-color: cadetblue;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.25rem;
+  width: 7.5rem; /* The 10rems stated in the redline include 1.25remx2 of padding. */
+}
 
 /* Footer */
 footer {
@@ -114,7 +134,6 @@ footer {
   padding-right: 2rem;
 /* This makes the background color 2rem wider than the site-container in each direction. */
   color: black;
-
 }
 
 footer img {
