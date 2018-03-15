@@ -1,4 +1,71 @@
-/*  */
+/* Style sheet for Tortioiseshell Project March 2018, Sarah Wynn */
+
+html {
+  font-size: 18px;
+  line-height: 1.4px;
+  font-family: Helvetica;
+}
+
+#Hero {
+  background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/tortoiseshell-optics/resources/images/glasses-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: grey;
+  height: 31rem;
+}
+
+#top-banner {
+  display: flex;
+  justify-content: space-between;
+  position: relative; /* N.B. all spacing relative to this element will be in relation to its non-positioned location!!! */
+  top: 1rem; /* This drops the banner down by one rem but leaves the background picture covering up to the top of the page. */
+  margin-left: auto;
+  margin-right: auto;
+  background-color: cadetblue;
+  color: white;
+  width: 960px;
+}
+
+.float-left {
+  display: flex;
+  align-items: center; /* Vertically aligns image with the words */
+  padding-left: 1rem;
+  color: white;
+}
+
+.float-left img {
+  /* padding: 1rem; */ /* Do not put vertical padding here as the height of the image messes with the total height of the banner. */
+  padding-left: 1rem;
+  height: 1.5rem;
+}
+
+.float-left span {
+  padding: 1rem; /* Adds to .float-left padding-left to give required 2rem spacer. */
+}
+
+.float-right {
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+  color: white;
+}
+
+.float-right span { /* This is the navigation section. */
+  padding: 1rem; /* Adds to .float-right padding-right to give required 2rem spacer. */
+}
+
+#LookSee {
+  display: inline-block;
+  position: absolute; /* LookSee is a relative of top-banner which is position:relative; */
+  top: 13rem; /* 13rem required to put 10rem between the borders of the two banners. */
+  right: -2rem;
+  background-color: white;
+  padding: 1.5rem 5rem;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.2;
+  color: black;
+}
 
 /* Titles & Background  */
 
