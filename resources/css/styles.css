@@ -6,6 +6,14 @@ html {
   font-family: Helvetica;
 }
 
+/* Titles & Background  */
+
+.site-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+}
+
 #Hero {
   background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/tortoiseshell-optics/resources/images/glasses-bg.png");
   background-repeat: no-repeat;
@@ -19,11 +27,8 @@ html {
   justify-content: space-between;
   position: relative; /* N.B. all spacing relative to this element will be in relation to its non-positioned location!!! */
   top: 1rem; /* This drops the banner down by one rem but leaves the background picture covering up to the top of the page. */
-  margin-left: auto;
-  margin-right: auto;
   background-color: cadetblue;
   color: white;
-  width: 960px;
 }
 
 .float-left {
@@ -67,9 +72,35 @@ html {
   color: black;
 }
 
-/* Titles & Background  */
-
 /* Service Offering Icons */
+
+#Services {
+  display: inline-flex;
+  justify-content: center; /* Positions the columns horizontally in the center */
+  width: 100%; /* This is needed so justify-content knows where to find the center. */
+
+}
+
+#col1, #col2, #col3 {
+  display: flex;
+  flex-direction: column; /* Puts wording underneath icon */
+  justify-content: space-between; /* Puts space between icons and associated wording */
+  align-items: center; /* cross-axis positioning (in this case, horizontally centered)*/
+  text-align: center; /* This centers the words with respect to each other. */
+  padding: 3rem; /* Puts space between the columns, and between columns and the preceeding and following sections. */
+  height: 8rem;
+  width: 5rem;
+}
+
+#col1 img {
+  width: 3.5rem;
+  height: auto;
+}
+
+#col2 img, #col3 img {
+  width: 5rem;
+  height: auto;
+}
 
 /* Philosphy and Appointment Info */
 
