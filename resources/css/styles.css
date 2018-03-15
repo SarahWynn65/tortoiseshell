@@ -33,7 +33,7 @@ html {
 
 .float-left {
   display: flex;
-  align-items: center; /* Vertically aligns image with the words */
+  align-items: center; /* Vertically aligns image with the words when display:flex */
   padding-left: 1rem;
   color: white;
 }
@@ -73,12 +73,12 @@ html {
 }
 
 /* Service Offering Icons */
+/* Note that the design specs showed the icons with their tops aligned, but the mock-ups showed the icons with their bottoms aligned. */
 
 #Services {
   display: inline-flex;
   justify-content: center; /* Positions the columns horizontally in the center */
   width: 100%; /* This is needed so justify-content knows where to find the center. */
-
 }
 
 #col1, #col2, #col3 {
@@ -105,3 +105,26 @@ html {
 /* Philosphy and Appointment Info */
 
 /* Footer */
+footer {
+  display: flex;
+  align-items: center;
+  background-color: azure;
+  margin-top: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+/* This makes the background color 2rem wider than the site-container in each direction. */
+  color: black;
+
+}
+
+footer img {
+  height: 1.5rem;
+  padding-left: 2rem; /* Gives the image 4rem distance to edge of background-color when combined with padding in footer. */
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  vertical-align: middle;  /* Vertically aligns image with the words */
+}
+
+footer span {
+  padding: 1rem; /* Puts 1rem space between img and span in footer */
+}
