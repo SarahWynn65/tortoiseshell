@@ -19,6 +19,7 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: grey;
+  background-position: center; /* As the screen-size shrinks, the image disappears from all edges. */
   height: 31rem;
 }
 
@@ -146,4 +147,27 @@ footer img {
 
 footer span {
   padding: 1rem; /* Puts 1rem space between img and span in footer */
+}
+
+
+/*  */
+/* Adjustments for iPads */
+
+@media only screen and (max-width: 960px) {
+  #top-banner {
+    top: 0; /* This snaps the banner to the top of the background picture. */
+  }
+  .site-container {
+    width: 100%;
+  }
+  #Hero {
+    height: 22rem;
+
+  }
+  #LookSee {
+    top: 8rem; /* 8rem required to put 5rem between the borders of the two banners. */
+    right: 2rem;
+    padding: 0.75rem 4rem;
+    font-size: 1.33rem;
+  }
 }
