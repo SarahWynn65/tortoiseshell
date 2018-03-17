@@ -6,7 +6,7 @@ html {
   font-family: Helvetica;
 }
 
-/* Titles & Background  */
+/* Titles & Background basic layout */
 
 .site-container {
   margin-left: auto;
@@ -19,7 +19,7 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: grey;
-  background-position: center; /* As the screen-size shrinks, the image disappears from all edges. */
+  background-position: 25% 35%; /* As the screen-size shrinks, the image disappears from all edges. */
   height: 31rem;
 }
 
@@ -73,7 +73,7 @@ html {
   color: black;
 }
 
-/* Service Offering Icons */
+/* Service Offering Icons for basic layout */
 /* Note that the design specs showed the icons with their tops aligned, but the mock-ups showed the icons with their bottoms aligned. */
 
 #Services {
@@ -106,7 +106,7 @@ html {
 /* Philosophy and Appointment Info */
 
 #Philosophy {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
 }
 
@@ -116,8 +116,9 @@ html {
   width: 35%;
 }
 
-h1 {
+#Philosophy h1 {
   background-color: cadetblue;
+  color: white;
   font-weight: bold;
   font-size: 1rem;
   margin-bottom: 1rem;
@@ -150,10 +151,19 @@ footer span {
 }
 
 
-/*  */
-/* Adjustments for iPads */
+/* Browser size adjustments */
+/* Adjustments for large screen */
+@media only screen and (min-width: 960px) {
+  .medium {
+    display: none;
+  }
+  .small {
+    display: none;
+  }
+}
 
-@media only screen and (max-width: 960px) {
+/* Adjustments for medium screen */
+@media only screen and (max-width: 960px) and (min-width: 641px) {
   #top-banner {
     top: 0; /* This snaps the banner to the top of the background picture. */
   }
@@ -162,12 +172,126 @@ footer span {
   }
   #Hero {
     height: 22rem;
-
+    background-position: 25% 35%;
   }
   #LookSee {
     top: 8rem; /* 8rem required to put 5rem between the borders of the two banners. */
     right: 2rem;
     padding: 0.75rem 4rem;
     font-size: 1.33rem;
+  }
+  .large {
+    display: none;
+  }
+  .small {
+    display: none;
+  }
+}
+
+/* Adjustments for small screen */
+@media only screen and (max-width: 640px) {
+  .large {
+    display: none;
+  }
+  .medium {
+    display: none;
+  }
+
+  #top-banner {
+    top: 0; /* This snaps the banner to the top of the background picture. */
+  }
+  .site-container {
+    width: 100%;
+  }
+  #Hero {
+    height: 17rem;
+    background-position: 20%;
+  }
+  #LookSee {
+    display: block;
+    position: absolute; /* LookSee is a relative of top-banner which is position:relative; */
+    top: 12rem; /* 12rem required to put 9rem between the borders of the two banners. */
+    left: 0; /* This is needed to reset the horizontal offset. */
+    text-align: center;
+    background-color: white;
+    padding: 1rem;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  #Services {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Positions the columns horizontally in the center */
+    margin-bottom: 3.77rem; /* This adds to the padding at the bottom of the last service to give 3.77rem */
+  }
+
+  #col1, #col2, #col3 {
+    display: flex;
+    flex-direction: column; /* Puts wording underneath icon */
+    text-align: center; /* This centers the words with respect to each other. */
+    margin-bottom: 1.54rem; /* Puts space between the columns, and between columns and the preceeding and following sections. */
+    padding: 0; /* Needed to remove padding from inherited desktop code. */
+    height: auto;
+    width: 5rem;
+    font-size: 0.77rem;
+  }
+
+  #col1 img {
+    margin-top: 3.77rem;
+    margin-bottom: 1rem;
+    width: 3.5rem;
+  }
+
+  #col2 img, #col3 img {
+    margin-bottom: 1rem; /* puts space between image and description. */
+    width: 5rem;
+  }
+
+  /* Philosophy and Appointment Info for small screens */
+
+  #Philosophy {
+    display: block;
+    width: 100%;
+    /* flex-wrap: wrap;
+    align-content: center; */
+  }
+
+  #Philosophy div {
+    width: 100%;
+  }
+
+  #Philosophy h1 {
+    background-color: cadetblue;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+  }
+
+  #Philosophy p {
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+    padding-left: 1rem; /* This just looks nicer */
+    padding-right: 1rem; /* This just looks nicer */
+    font-size: 0.77rem; /* As per small screen specs */
+  }
+
+/* Footer for small screens */
+
+  footer {
+    justify-content: center;
+    margin-top: 5rem;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+
+  footer img {
+    padding-left: 0; /* reset */
+  }
+
+  footer span {
+    display: none; /* Get rid of wording */
   }
 }
