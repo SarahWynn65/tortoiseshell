@@ -129,12 +129,11 @@ html {
 /* Footer */
 footer {
   display: flex;
-  align-items: center;
+  align-items: center; /* Needed to vertically center text */
   background-color: azure;
   margin-top: 5rem;
   padding-left: 2rem;
-  padding-right: 2rem;
-/* This makes the background color 2rem wider than the site-container in each direction. */
+  padding-right: 2rem; /* This makes the background color 2rem wider than the site-container in each direction. */
   color: black;
 }
 
@@ -253,24 +252,24 @@ footer span {
   #Philosophy {
     display: block;
     width: 100%;
-    /* flex-wrap: wrap;
-    align-content: center; */
   }
 
   #Philosophy div {
+    margin-left: 0; /* reset */
+    margin-right: 0; /* reset */
     width: 100%;
   }
 
   #Philosophy h1 {
-    background-color: cadetblue;
-    font-weight: bold;
+    margin-left: 0; /* reset */
+    margin-right: 0; /* reset */
+    padding-left: 0; /* reset */
     text-align: center;
     width: 100%;
   }
 
   #Philosophy p {
     margin: 0;
-    padding-top: 1rem;
     padding-bottom: 4rem;
     padding-left: 1rem; /* This just looks nicer */
     padding-right: 1rem; /* This just looks nicer */
@@ -280,8 +279,8 @@ footer span {
 /* Footer for small screens */
 
   footer {
-    justify-content: center;
-    margin-top: 5rem;
+    justify-content: center; /* Used to center image */
+    margin-top: 0;
     padding-left: 0;
     padding-right: 0;
     width: 100%;
